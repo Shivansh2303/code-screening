@@ -18,8 +18,8 @@ from rest_framework import routers
 from apps.demo.views import PostListViewSet
 
 router = routers.DefaultRouter()
-router.register(r'', PostListViewSet, basename='post')
+router.register(r'posts', PostListViewSet, basename='post')
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
 ]
